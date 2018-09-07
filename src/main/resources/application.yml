@@ -1,0 +1,22 @@
+spring:
+  datasource:
+#  数据库驱动
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123
+    url: jdbc:mysql://127.0.0.1:3306/weimai?characterEncoding=UTF-8&useSSL=false
+  jpa:
+#  数据库打印
+    show-sql: true
+  profiles:
+    active: prod
+server:
+  servlet:
+#  url前缀
+    context-path: /order
+logging:
+  pattern:
+    console: "%d - %msg%n"
+#    file: /var/log/tomcat/order.log
+#  level: debug
+#  path: /var/log/tomcat/
